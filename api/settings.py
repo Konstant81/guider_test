@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
     'app.apps.MyAppConfig',
     'rest_framework',
-
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -123,7 +123,7 @@ TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -135,3 +135,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+        'TEST_REQUEST_RENDERER_CLASSES': [
+        'rest_framework.renderers.MultiPartRenderer',
+        'rest_framework.renderers.JSONRenderer',
+        'rest_framework.renderers.TemplateHTMLRenderer'
+        ]
+}

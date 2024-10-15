@@ -1,12 +1,9 @@
-from django.urls import include, path
-from rest_framework.routers import DefaultRouter
-from .views import CityViewSet, StreetViewSet, ShopViewSet
+from django.urls import path
+from .views import CityViewSet, StreetViewSet, ShopListView
 
 
-router = DefaultRouter()
-router.register(r'city', CityViewSet)
-router.register(r'city/<int:city_pk>/street', StreetViewSet)
-router.register(r'shop', ShopViewSet)
 urlpatterns = [
-    path('', include(router.urls)),
+    path('shop/', ShopListView.as_view({'get': 'list', 'post':'create'})),
+    path('city/', CityViewSet.as_view({'get': 'list'})),
+    path('city/<int:pk>/street/', StreetViewSet.as_view({'get': 'retrieve'}))
     ]

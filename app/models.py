@@ -2,27 +2,32 @@ from django.db import models
 
 
 class City(models.Model):
-    name = title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
 
     class Meta:
-        db_table = "city"                   
+        db_table = "city"
         verbose_name = "Город"
         verbose_name_plural = "Города"
 
-class Street(models.Model):
-    name = title = models.CharField(max_length=100)
-    city = models.ForeignKey(City, on_delete=models.CASCADE, verbose_name='город')
+    def __str__(self):
+        return self.name
 
+class Street(models.Model):
+    name  = models.CharField(max_length=100)
+    city = models.ForeignKey(City, on_delete=models.CASCADE,related_name='streets', verbose_name='город')
 
     class Meta:
         db_table = "street"
         verbose_name = "Улица"
         verbose_name_plural = "Улицы"
 
+    def __str__(self):
+        return self.name
+
 
 class Shop(models.Model):
     name = models.CharField(max_length=100)
-    city = models.ForeignKey(City, on_delete=models.CASCADE, verbose_name='город')
+    city = models.ForeignKey(City,on_delete=models.CASCADE, verbose_name='город')
     street =  models.ForeignKey(Street, on_delete=models.CASCADE, verbose_name='улица')
     house_number = models.IntegerField()
     opening_time = models.TimeField()
@@ -32,3 +37,6 @@ class Shop(models.Model):
         db_table = "shop"
         verbose_name = "Магазин"
         verbose_name_plural = "Магазины"
+
+    def __str__(self):
+        return self.name
