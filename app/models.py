@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.core.validators import MinValueValidator
 
 class City(models.Model):
     name = models.CharField(max_length=100)
@@ -29,7 +29,7 @@ class Shop(models.Model):
     name = models.CharField(max_length=100)
     city = models.ForeignKey(City,on_delete=models.CASCADE, verbose_name='город')
     street =  models.ForeignKey(Street, on_delete=models.CASCADE, verbose_name='улица')
-    house_number = models.IntegerField()
+    house_number = models.IntegerField(validators = [MinValueValidator(1)])
     opening_time = models.TimeField()
     closing_time = models.TimeField()
 

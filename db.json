@@ -1,44 +1,5 @@
 [
 {
-  "model": "admin.logentry",
-  "pk": 1,
-  "fields": {
-    "action_time": "2024-10-14T14:44:41.639",
-    "user": 1,
-    "content_type": 7,
-    "object_id": "1",
-    "object_repr": "City object (1)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 2,
-  "fields": {
-    "action_time": "2024-10-14T14:45:05.201",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "Street object (1)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 3,
-  "fields": {
-    "action_time": "2024-10-14T14:46:07.967",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Shop object (1)",
-    "action_flag": 1,
-    "change_message": "[{\"added\": {}}]"
-  }
-},
-{
   "model": "auth.permission",
   "pk": 1,
   "fields": {
@@ -366,8 +327,8 @@
   "model": "auth.user",
   "pk": 1,
   "fields": {
-    "password": "pbkdf2_sha256$600000$pe7Gz59RYV261L0voi8qjE$obx3UZiLT/pwMvyagZB20FuRgnBnAKO1G91KQM/LrKU=",
-    "last_login": "2024-10-14T14:44:11.937",
+    "password": "pbkdf2_sha256$600000$VFBS1egiKVXoptrQyxwybj$4gwjxEkmkP00md1/s2hd6gPEv8Io+Q8pE1GylV0+l8w=",
+    "last_login": "2024-10-16T15:45:15.741",
     "is_superuser": true,
     "username": "root",
     "first_name": "",
@@ -375,17 +336,17 @@
     "email": "",
     "is_staff": true,
     "is_active": true,
-    "date_joined": "2024-10-14T14:43:14.153",
+    "date_joined": "2024-10-16T15:45:08.305",
     "groups": [],
     "user_permissions": []
   }
 },
 {
   "model": "sessions.session",
-  "pk": "y625v8xbdmtp4exdefqhp6463g6oyupf",
+  "pk": "7p3vx0xfjl7qieewjhvj1sa2iqaeovez",
   "fields": {
-    "session_data": ".eJxVjMEOwiAQRP-FsyE2C-3i0bvfQHYXkKqBpLQn479Lkx70Npn3Zt7K07Zmv7W4-DmoixrU6bdjkmcsOwgPKveqpZZ1mVnvij5o07ca4ut6uH8HmVrua0ByyQLwGR0AJrbiuAecDAaByBgNsAuSBiMxYDfcODqxOJEIifp8AeEVOI4:1t0JUh:Z61sHW-8PVvxL2ptcbjGVC078aC4g6KMT0Fd2rNrbcI",
-    "expire_date": "2024-10-28T14:44:11.966"
+    "session_data": ".eJxVjDsOgzAQRO_iOrJs42_K9JwBLbvrmCQyEoYqyt0DEkUiTTXvzbzFANtahq3xMkwkrkKLy283Aj65HoAeUO-zxLmuyzTKQ5EnbbKfiV-30_07KNDKvs7stPUEibpEI1tjnAPPIXtFGA0r42P0SJG8SlZltEF3Zg8gcEASny_qGjgE:1t13Ot:j_0k9qDAgV-p0NyJ6C7Yr4ngshkIG0J_DIMEgmzZEIY",
+    "expire_date": "2024-10-30T15:45:15.772"
   }
 },
 {
@@ -406,7 +367,7 @@
   "model": "app.city",
   "pk": 3,
   "fields": {
-    "name": "Тверь"
+    "name": "Владимир"
   }
 },
 {
@@ -420,14 +381,21 @@
   "model": "app.city",
   "pk": 5,
   "fields": {
-    "name": "Владимир"
+    "name": "Тверь"
+  }
+},
+{
+  "model": "app.city",
+  "pk": 6,
+  "fields": {
+    "name": "Воронеж"
   }
 },
 {
   "model": "app.street",
   "pk": 1,
   "fields": {
-    "name": "Ленина",
+    "name": "Полетаева",
     "city": 1
   }
 },
@@ -435,39 +403,39 @@
   "model": "app.street",
   "pk": 2,
   "fields": {
-    "name": "Полетаева",
-    "city": 2
+    "name": "Ленина",
+    "city": 1
   }
 },
 {
   "model": "app.street",
   "pk": 3,
   "fields": {
-    "name": "Чапаева",
-    "city": 3
+    "name": "Дзержинского",
+    "city": 1
   }
 },
 {
   "model": "app.street",
   "pk": 4,
   "fields": {
-    "name": "Ленина",
-    "city": 4
+    "name": "Революции",
+    "city": 2
   }
 },
 {
   "model": "app.street",
   "pk": 5,
   "fields": {
-    "name": "Индустриальная",
-    "city": 1
+    "name": "проспект Мира",
+    "city": 2
   }
 },
 {
   "model": "app.street",
   "pk": 6,
   "fields": {
-    "name": "Павлова",
+    "name": "Пушкина",
     "city": 2
   }
 },
@@ -475,23 +443,23 @@
   "model": "app.street",
   "pk": 7,
   "fields": {
-    "name": "Лобачевского",
-    "city": 5
+    "name": "Садовая",
+    "city": 3
   }
 },
 {
   "model": "app.street",
   "pk": 8,
   "fields": {
-    "name": "Революции",
-    "city": 4
+    "name": "площадь Восстания",
+    "city": 3
   }
 },
 {
   "model": "app.street",
   "pk": 9,
   "fields": {
-    "name": "Весенняя",
+    "name": "Щедрина",
     "city": 3
   }
 },
@@ -499,136 +467,192 @@
   "model": "app.street",
   "pk": 10,
   "fields": {
-    "name": "Пушкина",
-    "city": 5
+    "name": "Новаторов",
+    "city": 4
   }
 },
 {
   "model": "app.street",
   "pk": 11,
   "fields": {
-    "name": "Дзержинского",
+    "name": "Полежаева",
     "city": 4
+  }
+},
+{
+  "model": "app.street",
+  "pk": 12,
+  "fields": {
+    "name": "Ломоносова",
+    "city": 4
+  }
+},
+{
+  "model": "app.street",
+  "pk": 13,
+  "fields": {
+    "name": "Лермонтова",
+    "city": 5
+  }
+},
+{
+  "model": "app.street",
+  "pk": 14,
+  "fields": {
+    "name": "Чапаева",
+    "city": 5
+  }
+},
+{
+  "model": "app.street",
+  "pk": 15,
+  "fields": {
+    "name": "Лесная",
+    "city": 5
+  }
+},
+{
+  "model": "app.street",
+  "pk": 16,
+  "fields": {
+    "name": "Сельских строителей",
+    "city": 6
+  }
+},
+{
+  "model": "app.street",
+  "pk": 17,
+  "fields": {
+    "name": "Высоковольтная",
+    "city": 6
+  }
+},
+{
+  "model": "app.street",
+  "pk": 18,
+  "fields": {
+    "name": "Пирогова",
+    "city": 6
   }
 },
 {
   "model": "app.shop",
   "pk": 1,
   "fields": {
-    "name": "Техника",
+    "name": "Эльдорадо",
     "city": 1,
-    "street": 1,
-    "house_number": 56,
-    "opening_time": "10:00:00",
-    "closing_time": "18:00:00"
+    "street": 3,
+    "house_number": 78,
+    "opening_time": "08:00:00",
+    "closing_time": "20:00:00"
   }
 },
 {
   "model": "app.shop",
   "pk": 2,
   "fields": {
+    "name": "Магнит",
+    "city": 1,
+    "street": 1,
+    "house_number": 13,
+    "opening_time": "08:00:00",
+    "closing_time": "21:00:00"
+  }
+},
+{
+  "model": "app.shop",
+  "pk": 3,
+  "fields": {
+    "name": "Хозтовары",
+    "city": 1,
+    "street": 2,
+    "house_number": 35,
+    "opening_time": "08:00:00",
+    "closing_time": "17:00:00"
+  }
+},
+{
+  "model": "app.shop",
+  "pk": 4,
+  "fields": {
     "name": "Продукты",
     "city": 2,
-    "street": 2,
-    "house_number": 12,
+    "street": 5,
+    "house_number": 130,
+    "opening_time": "09:00:00",
+    "closing_time": "18:00:00"
+  }
+},
+{
+  "model": "app.shop",
+  "pk": 5,
+  "fields": {
+    "name": "Спорттовары",
+    "city": 2,
+    "street": 6,
+    "house_number": 78,
+    "opening_time": "10:00:00",
+    "closing_time": "20:00:00"
+  }
+},
+{
+  "model": "app.shop",
+  "pk": 6,
+  "fields": {
+    "name": "Дикси",
+    "city": 3,
+    "street": 7,
+    "house_number": 7,
     "opening_time": "09:00:00",
     "closing_time": "21:00:00"
   }
 },
 {
   "model": "app.shop",
+  "pk": 7,
+  "fields": {
+    "name": "Техника",
+    "city": 3,
+    "street": 8,
+    "house_number": 45,
+    "opening_time": "09:00:00",
+    "closing_time": "20:00:00"
+  }
+},
+{
+  "model": "app.shop",
+  "pk": 8,
+  "fields": {
+    "name": "Лента",
+    "city": 3,
+    "street": 9,
+    "house_number": 90,
+    "opening_time": "10:00:00",
+    "closing_time": "20:00:00"
+  }
+},
+{
+  "model": "app.shop",
+  "pk": 9,
+  "fields": {
+    "name": "Пятерочка",
+    "city": 4,
+    "street": 10,
+    "house_number": 66,
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00"
+  }
+},
+{
+  "model": "app.shop",
   "pk": 10,
   "fields": {
-    "name": "Подарки",
-    "city": 1,
-    "street": 1,
-    "house_number": 33,
-    "opening_time": "10:00:00",
+    "name": "Ремонт обуви",
+    "city": 4,
+    "street": 11,
+    "house_number": 40,
+    "opening_time": "08:00:00",
     "closing_time": "15:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 12,
-  "fields": {
-    "name": "Молоко",
-    "city": 3,
-    "street": 3,
-    "house_number": 156,
-    "opening_time": "10:00:00",
-    "closing_time": "17:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 13,
-  "fields": {
-    "name": "Магнит",
-    "city": 5,
-    "street": 7,
-    "house_number": 11,
-    "opening_time": "08:00:00",
-    "closing_time": "21:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 14,
-  "fields": {
-    "name": "Пятерочка",
-    "city": 4,
-    "street": 8,
-    "house_number": 57,
-    "opening_time": "08:00:00",
-    "closing_time": "20:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 16,
-  "fields": {
-    "name": "Пятерочка",
-    "city": 4,
-    "street": 8,
-    "house_number": 57,
-    "opening_time": "08:00:00",
-    "closing_time": "20:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 17,
-  "fields": {
-    "name": "Пятерочка",
-    "city": 4,
-    "street": 8,
-    "house_number": 57,
-    "opening_time": "08:00:00",
-    "closing_time": "20:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 18,
-  "fields": {
-    "name": "Пятерочка",
-    "city": 1,
-    "street": 1,
-    "house_number": 14,
-    "opening_time": "08:00:00",
-    "closing_time": "20:00:00"
-  }
-},
-{
-  "model": "app.shop",
-  "pk": 19,
-  "fields": {
-    "name": "Эльдорадо",
-    "city": 5,
-    "street": 7,
-    "house_number": 78,
-    "opening_time": "08:00:00",
-    "closing_time": "20:00:00"
   }
 }
 ]

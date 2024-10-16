@@ -2,27 +2,28 @@ version: '3.9'
 
 services:
 
-  # web:
-  #   # build: .
-  #   image: konstant81/test_api
-  #   command: sh -c "python manage.py migrate &&
-  #            python manage.py loaddata db.json &&
-  #            python manage.py runserver 0.0.0.0:8000"
-  #   restart: always
-  #   ports:
-  #     - 8000:8000
-  #   environment:
-  #     - ./.env
-  #   depends_on:
-  #     - db
+  web:
+    # build: .
+    image: konstant81/guider_api
+    # command: python manage.py runserver 0.0.0.0:8000
+    command: sh -c "python manage.py migrate &&
+             python manage.py loaddata db.json &&
+             python manage.py runserver 0.0.0.0:8000"
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      - ./.env
+    depends_on:
+      - db
 
   db:
     container_name: pgdb
     image: postgres:16-alpine
     env_file:
       - ./.env
-    volumes:
-      - ./pgdata:/var/lib/postgresql/data/pgdata
+    # volumes:
+    #   - ./pgdata:/var/lib/postgresql/data
     restart: always
     ports:
       - 5432:5432

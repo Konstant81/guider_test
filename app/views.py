@@ -24,9 +24,7 @@ class ShopListView(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         queryset = self.get_queryset()
-        print(queryset)
         serializer = self.get_serializer(queryset, many=True)
-        print(serializer.data)
         return Response(serializer.data)
 
     def get_queryset(self):
@@ -54,7 +52,7 @@ class ShopListView(viewsets.ModelViewSet):
         street= Street.objects.get(pk=request.data["street"])
         city = City.objects.get(pk=request.data["city"])
         if street.city.id != city.id:
-            raise serializers.ValidationError({'error': f'В городе {city.name} отсутствует улица {street.name}'})
+            raise serializers.ValidationError({'error': f'В городе {city.name} с id={city.pk} отсутствует улица {street.name} с id={street.pk}'})
         self.perform_create(serializer)
         headers = self.get_success_headers(serializer.data)
         return Response({"id": serializer.data['id']}, status=status.HTTP_201_CREATED, headers=headers)
